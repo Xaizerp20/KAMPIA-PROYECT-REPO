@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/solid.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+  <link rel="stylesheet" type="text/css" href="/css/map.css">
+  <title>DASHBOARD</title>
+</head>
+
+<body>
+
+  <!--=====================================================-->
+  <!-- ENCABEZADO -->
+  <!--=====================================================-->
+  <header class="container-fluid bg-primary d-flex justify-content-between p-2 text-light custom-shadow2 mb-4">
+    <h1>DASHBOARD</h1>
+    <button onclick="window.location.href='/logout'" class="button-7">Cerrar sesión</button>
+  </header>
+
+  <!--
+ <!-- Button trigger modal 
+<button id="alertButton" type="button" class="invisible" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Seleccione un vehiculo</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <select id="selectVehAlert" class="form-select" aria-label="Default select example">
+          <option selected>Open this select Vehicle</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+  <div class="container" style="min-width: 350px;">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-4 col-sm-12 d-inline-block w-auto ">
+
+      </div>
+      <div class="col-md-8 col-sm-12 ">
+        <div class="row ">
+          <div class="col-md-6 col-sm-12">
+
+
+
+
+
+          </div>
+          <div class="col-md-6 col-sm-12 ">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="row">
+      <div class="col">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item w-50" role="presentation">
+            <button class="nav-link active  w-100 text-dark " id="home-tab" data-bs-toggle="tab"
+              data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+              aria-selected="true">Profile</button>
+          </li>
+          <li class="nav-item w-50" role="presentation">
+            <button class="nav-link  w-100 text-dark " id="profile-tab" data-bs-toggle="tab"
+              data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+              aria-selected="false">Dashboard</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+            <div class="row">
+              <div class="col-xl-5 col-lg-5 col-md-5">
+
+                <div class="card mb-3 custom-shadow" style="max-width: 540px;">
+                  <div class="row g-0 border border-2 border-success rounded-2 m-1 custom-shadow">
+                    <div class="col-md-6 col-sm-6 col-6">
+                      <img src="/imgs/user-img.png" class="img-fluid rounded-start bg-success h-100" alt="...">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-6">
+                      <div class="card-body">
+                        <h5 class="card-title">USER INFORMATION</h5>
+                        <p class="card-text">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item border-0">
+                            <h6>Name <span id="name" class="badge bg-secondary"></span></h6>
+                          </li>
+                          <li class="list-group-item">
+                            <h6>DNI <span id="dni" class="badge bg-secondary"></span></h6>
+                          </li>
+                        </ul>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col mt-3 d-flex justify-content-center">
+                      <div class="card border-primary border-2 custom-shadow w-100" style="width: 18rem;">
+                        <h5 class="card-title m-auto mt-2">VEHICLE INFO</h5>
+                        <img id="img_veh" src="" class="card-img-top p-3 m-auto" alt="..."
+                          style="width: 150px; height: 150px;">
+                        <div class="card-body">
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">
+                            <select id="selectVeh" class="form-select" aria-label="Default select example">
+                              <option selected>Open this select Vehicle</option>
+                            </select>
+                          </li>
+                          <li class="list-group-item">
+                            <h6>TYPE VEHICLE: <span id="typeVeh" class="badge bg-secondary"></span></h6>
+                          </li>
+                          <li class="list-group-item">
+                            <h6>PLATE: <span id="plate" class="badge bg-secondary"></span></h6>
+                          </li>
+                          <li class="list-group-item">
+                            <h6>MODEL: <span id="model" class="badge bg-secondary"></span></h6>
+                          </li>
+                          <li class="list-group-item">
+                            <h6>COLOR: <span id="color" class="badge bg-secondary"></span></h6>
+                          </li>
+                          <li class="list-group-item">
+                            <h6>DEVICE: <span id="devices" class="badge bg-secondary"></span></h6>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="col-xl-7 col-lg-7 col-md-7">
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <!--<button class="nav-link active text-dark w-100 hover-effect" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Device Information</button> -->
+                    <!-- <button class="nav-link  text-dark hover-overlay  w-50" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">SimCard Information</button> -->
+                  </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                    tabindex="0">
+                    <div class="card text- mb-3  custom-shadow" style="max-width: auto;">
+
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-12 d-flex justify-content-center align-items-center">
+                            <div class="card mb-3 custom-shadow2 " style="max-width: 540px;">
+                              <div class="row g-0 d-flex align-items-center">
+                                <div class="col-md-4 d-flex flex-column">
+                                  <img src="/imgs/Picture1.png" class="img-fluid rounded-star" alt="...">
+                                  <span id="deviceId" class="badge bg-secondary ms-2"></span>
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <ul class="list-group">
+                                      <li class="list-group-item text-center">
+                                        <span id="textStatus" class="badge bg-secondary me-3"></span>
+                                        <div class="led-container">
+                                          <div id="led" class=""></div>
+                                        </div>
+                                      </li>
+                                      <li class="list-group-item">
+                                        <div id="imgDeviceBattery" class="progress" role="progressbar"
+                                          aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0"
+                                          aria-valuemax="100" style="display: none;">
+                                          <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                            style="width: 75%">75%</div>
+                                        </div>
+                                      </li>
+                                      <li class="list-group-item">
+                                        <h6>Cover Access: <span id="protect" class="badge bg-secondary"></span>
+                                        </h6>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                        <div class="row">
+                          <div class="col-xl-6 col-lg-12">
+                            <ul class="list-group">
+                              <li class="list-group-item">
+                                <h6>Manual Control <span id="manControl" class="badge bg-secondary"></span></h6>
+                              </li>
+                              <li class="list-group-item">
+                                <h6>Remote Control <span id="remControl" class="badge bg-secondary"></span></h6>
+                              </li>
+                              <li class="list-group-item">
+                                <h6>Last Opening <span id="lastOpen" class="badge bg-secondary"></span></h6>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="col-xl-6 col-lg-12">
+                            <div class="accordion" id="accordionPanelsStayOpenExample">
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                  <button class="accordion-button collapsed bg-primary text-light" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo ">
+                                    Last Position
+                                  </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                  aria-labelledby="panelsStayOpen-headingTwo">
+                                  <div class="accordion-body">
+                                    <ul class="list-group">
+                                      <li class="list-group-item">
+                                        <h6>Latt: <span id="latt" class="badge bg-secondary"></span>
+                                        </h6>
+                                      </li>
+                                      <li class="list-group-item">
+                                        <h6>Lng: <span id="lng" class="badge bg-secondary"></span>
+                                        </h6>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"
+                    tabindex="0">
+                    <div class="card mb-3  custom-shadow" style="max-width: auto;">
+                      <img src="/imgs/SIMCard.png" class="img-fluid mb-3" alt="..."
+                        style="height: 100px; margin-top: 60px; object-fit: cover;">
+                      <div class="card-body">
+                        <ul class="list-group">
+                          <li class="list-group-item">
+                            <h6>Number: <span id="numberSim" class="badge bg-secondary"></span></h6>
+                          </li>
+                          <li class="list-group-item">
+                            <h6>Provider: <span id="provider" class="badge bg-secondary"></span></h6>
+                          </li>
+                          <li class="list-group-item">
+                            <h6>Number Phone: <span id="numberPhone" class="badge bg-secondary"></span></h6>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="col-12">
+              <div class="card text- mb-3  custom-shadow" style="max-width: auto;">
+                <div class="card-header bg-black text-light">PANEL CONTROL</div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                      <ul class="list-group list-group-flush text-center">
+                        <li class="list-group-item d-flex flex-column align-items-center">
+                          <h5>MOTOR CONTROL ACCESS</h5>
+                          <div>
+                            <button id="deviceControl" class="btn btn-primary">
+                              <i id="iconDevice" class="fa fa-lock"></i>
+                            </button>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex flex-column align-items-center justify-content-center">
+                          <h5>COVER CONTROL ACCESS</h5>
+                          <div>
+                            <button id="coverControl" class="btn btn-primary">
+                              <i id="iconCover" class="fa fa-lock"></i>
+                            </button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6 col-sm-12 mt-3">
+                      <ul class="list-group list-group-flush text-center  border border-2 border-danger rounded-3">
+                        <li class="list-group-item bg-danger">
+                          <h6 class="w-100 text-light">Remote Controls</h6>
+                        </li>
+                        <div class="row">
+                          <div class="col">
+                            <li class="list-group-item border-0 d-flex justify-content-center">
+                              <div class="d-flex justify-content-center" id="buttonContainer">
+                                <label class="switch">
+                                  <input type="checkbox" id="flexSwitchCheckDefault">
+                                  <span class="slider" id="controlremoto"></span>
+                                </label>
+                              </div>
+    
+                              <div class="spinner-border" role="status" id="waitIcon" style="display:none">
+                                <span class="visually-hidden">Loading...</span>
+                              </div>
+    
+                             
+    
+                            </li>
+                            <li class="list-group-item border-0">
+                              <button id="adminOpen" type="button" class="btn btn-danger" style="min-width: 120px;">
+                                OPEN DEVICE
+                              </button>
+
+                            </li>
+                          </div>
+                          <div class="col d-flex flex-column align-items-center">
+                            <label for="customRange2" class="form-label">GPS Interval</label>
+
+                            <div id="containerRange">
+                              <input type="range" class="form-range" min="0" max="300" id="customRange2">
+                              <h6>Actual value <span class="badge bg-secondary" id="gpsInterval">New</span></h6>
+                            </div>
+
+                            <div class="spinner-border" role="status" id="waitIconGpsInterval" style="display:none">
+                              <span class="visually-hidden">Loading...</span>
+                            </div>
+                           
+                          </div>
+                        </div>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card text- mb-3  custom-shadow" style="max-width: auto;">
+                <div class="card-header bg-black text-light">MAP LOCATION</div>
+                <div class="card-body">
+                  <div id="map" class="map" style="height: 400px; width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="/js/map.js" defer></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYZYd5WpXoYF5ldkFvLaF-DmNsdI34PKw&callback=initMap"></script>
+</body>
+
+</html>
