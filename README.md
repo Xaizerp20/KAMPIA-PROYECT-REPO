@@ -1,4 +1,34 @@
-# 15-100-4-KAMPIA-SoftwarePlatform
+# Proyecto de Dispositivo de Seguridad para Motocicletas
+
+## Descripción
+
+Este proyecto es un sistema de seguridad diseñado para motocicletas que incluye un dispositivo de hardware instalado en la motocicleta y un sistema remoto web desarrollado en Node.js con Express.js. El dispositivo de seguridad está diseñado para brindar protección y seguimiento en caso de robo o situaciones de emergencia.
+
+## Características Principales del Dispositivo
+
+### Seguimiento GPS
+
+El dispositivo está equipado con un módulo GPS que permite rastrear la ubicación en tiempo real de la motocicleta. Los usuarios pueden ver la ubicación de su motocicleta en un mapa a través del sistema remoto web.
+
+### Bloqueo y Desbloqueo de Ruedas
+
+A través de un control remoto, los propietarios de la motocicleta pueden bloquear o desbloquear el movimiento de las ruedas de la motocicleta. Esto es útil para evitar el robo de la motocicleta cuando está estacionada.
+
+### Detección de Impacto
+
+El dispositivo está equipado con un sensor de impacto que puede detectar golpes o movimientos bruscos. En caso de una colisión o un intento de robo, el sistema puede enviar una notificación de alerta a los propietarios.
+
+### Sistema Remoto Web
+
+El sistema remoto web desarrollado en Node.js con Express.js permite a los propietarios de la motocicleta controlar el dispositivo de manera remota. Las funciones incluyen:
+
+- Ver la ubicación en tiempo real de la motocicleta en un mapa interactivo.
+
+- Bloquear o desbloquear las ruedas de la motocicleta de manera remota.
+
+- Desmontar el dispositivo de seguridad de la motocicleta de manera remota en caso de emergencia.
+
+## Instalación y Uso
 
 ### Configuración del Dispositivo
 
@@ -38,6 +68,8 @@ Si desea contribuir a este proyecto, siga estos pasos:
 
 Este proyecto está bajo la licencia [Licencia MIT](LICENSE).
 
-**RESPONSE DEVICE CONTROL ACCESS MOTOR**
-0 = "Not Receveid"
-1 = Received
+## Contacto
+
+Si tiene preguntas o sugerencias, no dude en ponerse en contacto con el equipo de desarrollo.
+
+¡Gracias por utilizar nuestro sistema de seguridad para motocicletas! Esperamos que proporcione una mayor tranquilidad y seguridad para su vehículo.
