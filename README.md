@@ -4,7 +4,10 @@
 
 Este proyecto es un sistema de seguridad diseñado para motocicletas que incluye un dispositivo de hardware instalado en la motocicleta y un sistema remoto web desarrollado en Node.js con Express.js. El dispositivo de seguridad está diseñado para brindar protección y seguimiento en caso de robo o situaciones de emergencia.
 
-## Características Principales del Dispositivo
+Tanto el dispositivo de seguridad en la motocicleta como el sistema remoto web utilizan el protocolo MQTT para la comunicación en tiempo real. Esto permite un intercambio eficiente de datos, incluyendo información de GPS y estados del motor, entre el dispositivo y el sistema web.
+
+## Características Principales de la Plataforma
+![Gestión de Usuarios](/kampia-node-project/app_Imgs/CONTROLS%20AND%20MAP.jpg)
 
 ### Seguimiento GPS
 
@@ -28,6 +31,37 @@ El sistema remoto web desarrollado en Node.js con Express.js permite a los propi
 
 - Desmontar el dispositivo de seguridad de la motocicleta de manera remota en caso de emergencia.
 
+### Perfil del Usuario
+
+![Gestión de Usuarios](/kampia-node-project/app_Imgs/DASHBOARD.jpg)
+
+El sistema remoto web incluye un perfil de usuario que permite a los propietarios:
+
+- Seleccionar y monitorear diferentes vehículos registrados.
+
+- Ver información detallada de cada vehículo, incluyendo su ubicación en tiempo real, estado de bloqueo de las ruedas y nivel de carga de la batería del dispositivo.
+
+- Personalizar las configuraciones de notificación y alerta para cada vehículo.
+
+## Gestión Administrador
+
+![Gestión de Usuarios](/kampia-node-project/app_Imgs/PANEL%20ADMINISTRATOR.jpg)
+
+
+El sistema de gestión administrador está diseñado para que los administradores realicen las siguientes acciones:
+
+- Crear usuarios y asignarles roles y permisos específicos.
+
+- Registrar nuevos vehículos y asignarlos a usuarios registrados.
+
+- Agregar dispositivos de seguridad y asignarlos a vehículos específicos.
+
+- Gestionar las SIM cards utilizadas en los dispositivos de seguridad.
+
+- Ver registros y registros de eventos, incluyendo actividades de usuarios y alertas.
+
+
+
 ## Instalación y Uso
 
 ### Configuración del Dispositivo
@@ -46,30 +80,10 @@ El sistema remoto web desarrollado en Node.js con Express.js permite a los propi
 
 3. Configure las credenciales y la conexión con el dispositivo de seguridad en el archivo de configuración.
 
-4. Inicie el servidor web con `npm start`.
+4. Inicie el servidor web con `npm run dev`.
 
 5. Acceda al sistema remoto web a través de su navegador y regístrese como usuario.
 
 6. Disfrute de las funciones de control y seguimiento del dispositivo de seguridad.
 
-## Contribución
 
-Si desea contribuir a este proyecto, siga estos pasos:
-
-1. Haga un fork de este repositorio en GitHub.
-
-2. Clone el repositorio bifurcado en su máquina local.
-
-3. Cree una nueva rama para su función o corrección de errores.
-
-4. Realice sus cambios y envíe una solicitud de extracción.
-
-## Licencia
-
-Este proyecto está bajo la licencia [Licencia MIT](LICENSE).
-
-## Contacto
-
-Si tiene preguntas o sugerencias, no dude en ponerse en contacto con el equipo de desarrollo.
-
-¡Gracias por utilizar nuestro sistema de seguridad para motocicletas! Esperamos que proporcione una mayor tranquilidad y seguridad para su vehículo.
